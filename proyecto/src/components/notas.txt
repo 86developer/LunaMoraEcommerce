@@ -5,3 +5,5 @@ Tareas Pendientes:
 - Terminar el carousel y arreglar la funcionalidad que pasa las imagenes y tambien colocarlas para que vayan pasando horizontal
 
 -Comenzar a hacer el Footer
+
+-Consultar con Iván cómo se llevan los cambios que se realizan en las ramas de cada miembro hacia la rama main
