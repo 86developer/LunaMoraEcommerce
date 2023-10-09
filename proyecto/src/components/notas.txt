@@ -1,0 +1,7 @@
+NOTAS DE PROYECTO
+
+Tareas Pendientes:
+
+- Terminar el carousel y arreglar la funcionalidad que pasa las imagenes y tambien colocarlas para que vayan pasando horizontal
+
+-Comenzar a hacer el Footer
