@@ -16,3 +16,21 @@
   --color-cuatro: #d7a1f6;
   --color-cinco: #ffb888;
 }
+
+body {
+  margin: 0;
+  /* Elimina el margen predeterminado del cuerpo */
+  padding: 0;
+  /* Elimina el relleno predeterminado del cuerpo */
+}
+
+.carousel-container {
+  height: auto;
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1 {
+  color: var(--color-blanco);
+}
