@@ -13,3 +13,5 @@ Tareas Pendientes:
 -Solicitar texto de Nosotros a Yael (Dueña)
 
 -Comenzar a hacer el Footer
+
+-Consultar con Iván cómo se llevan los cambios que se realizan en las ramas de cada miembro hacia la rama main
