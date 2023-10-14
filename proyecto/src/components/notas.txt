@@ -2,6 +2,14 @@ NOTAS DE PROYECTO
 
 Tareas Pendientes:
 
-- Terminar el carousel y arreglar la funcionalidad que pasa las imagenes y tambien colocarlas para que vayan pasando horizontal
+-Agregar Link al navbar
+
+-Chequear layout y agregar las distintas paginas del sitio (carrito, nosotros, productos etc)
+
+-Agregar fuentes con complemento de NextJs (Fonts)
+
+-Dar estilos a colecciones
+
+-Solicitar texto de Nosotros a Yael (Dueña)
 
 -Comenzar a hacer el Footer
