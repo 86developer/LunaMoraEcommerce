@@ -2,6 +2,8 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image';
+import '../styles/navbar.css';
 
 const navigation = {
     categories: [
@@ -259,17 +261,6 @@ export default function Example() {
                                     </div>
                                 </div>
 
-                                <div className="border-t border-gray-200 px-4 py-6">
-                                    <a href="#" className="-m-2 flex items-center p-2">
-                                        <img
-                                            src="https://tailwindui.com/img/flags/flag-argentina.svg"
-                                            alt=""
-                                            className="block h-auto w-5 flex-shrink-0"
-                                        />
-                                        <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
-                                        <span className="sr-only">, change currency</span>
-                                    </a>
-                                </div>
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>
@@ -277,8 +268,8 @@ export default function Example() {
             </Transition.Root>
 
             <header className="relative bg-white">
-                <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-                    Get free delivery on orders over $100
+                <p className="promocion flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+                    Festejamos el Dia de la Madre!! 50% OFF
                 </p>
 
                 <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -298,11 +289,7 @@ export default function Example() {
                             <div className="ml-4 flex lg:ml-0">
                                 <a href="#">
                                     <span className="sr-only">Your Company</span>
-                                    <img
-                                        className="h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                        alt=""
-                                    />
+                                    <Image width={100} height={100} src="/img/lunafondo.png" />
                                 </a>
                             </div>
 
