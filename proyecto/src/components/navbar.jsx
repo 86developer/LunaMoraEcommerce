@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -123,8 +124,8 @@ const navigation = {
         },
     ],
     pages: [
-        { name: 'Company', href: '#' },
-        { name: 'Stores', href: '#' },
+        { name: 'Nosotros', href: '/nosotros' },
+        { name: 'Productos', href: '/productos' },
     ],
 }
 
@@ -287,10 +288,10 @@ export default function Example() {
 
                             {/* Logo */}
                             <div className="ml-4 flex lg:ml-0">
-                                <a href="#">
-                                    <span className="sr-only">Your Company</span>
+                                <Link href="/home">
+                                    <span className="sr-only">Luna Mora</span>
                                     <Image width={100} height={100} src="/img/lunafondo.png" />
-                                </a>
+                                </Link>
                             </div>
 
                             {/* Flyout menus */}
@@ -382,13 +383,11 @@ export default function Example() {
                                     ))}
 
                                     {navigation.pages.map((page) => (
-                                        <a
-                                            key={page.name}
-                                            href={page.href}
-                                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                                        >
-                                            {page.name}
-                                        </a>
+                                        <Link legacyBehavior key={page.name} href={page.href}>
+                                            <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
+                                                {page.name}
+                                            </a>
+                                        </Link>
                                     ))}
                                 </div>
                             </Popover.Group>
