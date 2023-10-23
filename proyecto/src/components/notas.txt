@@ -1,8 +1,17 @@
-NOTAS DE PROYECTO
+                  NOTAS DE PROYECTO
+
+///INFO///
+
+*La funcionalidad de Optimización de Imágenes, Fuentes y Scripts de NextJs 
+(ajusta width y height automáticamente) 
+***SOLO FUNCIONA*** 
+Con una importación estática desde la carpeta local. con lo cual por CDN o servidor de imágenes se deben ajustar los parámetros manualmente para que sea responsive.
+
+----------------------------------------------------
 
 Tareas Pendientes:
 
--Agregar Link al navbar
+-Agregar Link (funcionalidad de NextJs) al navbar
 
 -Chequear layout y agregar las distintas paginas del sitio (carrito, nosotros, productos etc)
 
@@ -14,4 +23,14 @@ Tareas Pendientes:
 
 -Comenzar a hacer el Footer
 
--Consultar con Iván cómo se llevan los cambios que se realizan en las ramas de cada miembro hacia la rama main
+-Consultar con Iván cómo se llevan los cambios que se realizan en las ramas de cada miembro hacia la rama main (sugirió revisar docs de GitHub)
+
+https://docs.github.com/es/pull-requests
+
+Deberias ir al repo main y modificarle esa configuracion, la configuracion de la seguridad es asi:
+
+securty / branches / add protection rule / protect matching branches / require pull request before merging
+
+Una vez que terminamos con el Front (que falta bastante) deberíamos arrancar con el backend no?
+
+Si es ecommerce, si. Porque vas a necesitar donde guardar usuarios, las compras, los productos, etc
