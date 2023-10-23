@@ -4,8 +4,7 @@ import {
   Roboto_Condensed, Alex_Brush
 } from 'next/font/google';
 import Navbar from '@/components/navbar';
-import Colecciones from '@/components/colecciones';
-import Carousel from '@/components/carousel';
+import Footer from '@/components/footer';
 
 const roboto = Roboto_Condensed({
   weight: ["300"],
@@ -31,9 +30,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={roboto.className}>
         <Navbar />
-        <Carousel />
-        <Colecciones />
         {children}
+        <Footer />
+
 
       </body>
     </html>
