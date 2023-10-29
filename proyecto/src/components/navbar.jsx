@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import Link from 'next/link';
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
@@ -9,8 +9,8 @@ import '../styles/navbar.css';
 const navigation = {
     categories: [
         {
-            id: 'women',
-            name: 'Women',
+            id: 'Lenceria de Diseño',
+            name: 'Lenceria de Diseño',
             featured: [
                 {
                     name: 'New Arrivals',
@@ -62,62 +62,6 @@ const navigation = {
                         { name: 'Re-Arranged', href: '#' },
                         { name: 'Counterfeit', href: '#' },
                         { name: 'Significant Other', href: '#' },
-                    ],
-                },
-            ],
-        },
-        {
-            id: 'men',
-            name: 'Men',
-            featured: [
-                {
-                    name: 'New Arrivals',
-                    href: '#',
-                    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-                    imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
-                },
-                {
-                    name: 'Artwork Tees',
-                    href: '#',
-                    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
-                    imageAlt:
-                        'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-                },
-            ],
-            sections: [
-                {
-                    id: 'clothing',
-                    name: 'Clothing',
-                    items: [
-                        { name: 'Tops', href: '#' },
-                        { name: 'Pants', href: '#' },
-                        { name: 'Sweaters', href: '#' },
-                        { name: 'T-Shirts', href: '#' },
-                        { name: 'Jackets', href: '#' },
-                        { name: 'Activewear', href: '#' },
-                        { name: 'Browse All', href: '#' },
-                    ],
-                },
-                {
-                    id: 'accessories',
-                    name: 'Accessories',
-                    items: [
-                        { name: 'Watches', href: '#' },
-                        { name: 'Wallets', href: '#' },
-                        { name: 'Bags', href: '#' },
-                        { name: 'Sunglasses', href: '#' },
-                        { name: 'Hats', href: '#' },
-                        { name: 'Belts', href: '#' },
-                    ],
-                },
-                {
-                    id: 'brands',
-                    name: 'Brands',
-                    items: [
-                        { name: 'Re-Arranged', href: '#' },
-                        { name: 'Counterfeit', href: '#' },
-                        { name: 'Full Nelson', href: '#' },
-                        { name: 'My Way', href: '#' },
                     ],
                 },
             ],
@@ -290,7 +234,7 @@ export default function Example() {
                             <div className="ml-4 flex lg:ml-0">
                                 <Link href="/home">
                                     <span className="sr-only">Luna Mora</span>
-                                    <Image width={100} height={100} src="/img/lunafondo.png" />
+                                    <Image priority width={100} height={100} src="/img/lunafondo.png" alt='lenceria de diseño' />
                                 </Link>
                             </div>
 
@@ -383,10 +327,8 @@ export default function Example() {
                                     ))}
 
                                     {navigation.pages.map((page) => (
-                                        <Link legacyBehavior key={page.name} href={page.href}>
-                                            <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
-                                                {page.name}
-                                            </a>
+                                        <Link key={page.name} href={page.href} className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer">
+                                            {page.name}
                                         </Link>
                                     ))}
                                 </div>
@@ -395,25 +337,15 @@ export default function Example() {
                             <div className="ml-auto flex items-center">
                                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                                     <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                                        Sign in
+                                        Iniciar Sesion
                                     </a>
                                     <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                                     <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                                        Create account
+                                        Crear Cuenta
                                     </a>
                                 </div>
 
-                                <div className="hidden lg:ml-8 lg:flex">
-                                    <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
-                                        <img
-                                            src="https://tailwindui.com/img/flags/flag-canada.svg"
-                                            alt=""
-                                            className="block h-auto w-5 flex-shrink-0"
-                                        />
-                                        <span className="ml-3 block text-sm font-medium">CAD</span>
-                                        <span className="sr-only">, change currency</span>
-                                    </a>
-                                </div>
+
 
                                 {/* Search */}
                                 <div className="flex lg:ml-6">
