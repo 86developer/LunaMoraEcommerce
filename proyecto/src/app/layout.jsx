@@ -24,7 +24,7 @@ const alex = Alex_Brush({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         {/* Puedes agregar aquí tus etiquetas <meta>, <link>, etc., según sea necesario */}
       </head>
