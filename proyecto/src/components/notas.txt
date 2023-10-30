@@ -6,6 +6,9 @@
 
 Estando en su rama ejecutar en consola:
 
+git status
+    -Permite ver el estado antes de operar comandos.
+
 git fetch origin main 
 
     -Descarga los últimos cambios del repositorio remoto pero no los aplica en tu directorio de trabajo local ni en tu rama local. Esto te permite ver qué cambios han ocurrido en el repositorio remoto sin necesidad de fusionarlos inmediatamente en tu rama local
@@ -20,6 +23,8 @@ Asegurense de resolver cualquier conflicto que pueda surgir durante la fusión.
     **SUBIR CAMBIOS **
 
 Después de resolver los conflictos y realizar los cambios y haber trabajado con el codigo, pueden subirlos a la rama remota "nombre de su rama" ejecutando:
+git status
+    -Permite ver el estado antes de operar comandos.
 
 git checkout main
     -Cambio a la rama main remota
