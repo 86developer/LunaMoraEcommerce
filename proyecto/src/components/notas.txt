@@ -1,36 +1,55 @@
-                  NOTAS DE PROYECTO
+                                                    
+                                                    NOTAS DE PROYECTO
+-----------------------------------------------------------------------------------------------------------------------------------
 
-///INFO///
+    **TOMAR CAMBIOS DE MAIN**
+
+Estando en su rama ejecutar en consola:
+
+git fetch origin main 
+
+    -Descarga los últimos cambios del repositorio remoto pero no los aplica en tu directorio de trabajo local ni en tu rama local. Esto te permite ver qué cambios han ocurrido en el repositorio remoto sin necesidad de fusionarlos inmediatamente en tu rama local
+
+git merge origin/main 
+
+    -Fusiona la historia de la rama especificada en tu rama actual. Si la fusión se realiza sin problemas, Git crea un nuevo commit que representa la combinación de ambas ramas.
+    Si hay conflictos durante la fusión, Git te notificará sobre estos conflictos y te pedirá que los resuelvas manualmente antes de que puedas completar la fusión. Una vez que resuelvas los conflictos y hagas los cambios necesarios, puedes finalizar la fusión y hacer un nuevo commit para confirmar la fusión.
+
+Asegurense de resolver cualquier conflicto que pueda surgir durante la fusión.
+
+    **SUBIR CAMBIOS **
+
+Después de resolver los conflictos y realizar los cambios y haber trabajado con el codigo, pueden subirlos a la rama remota "nombre de su rama" ejecutando:
+
+git checkout main
+    -Cambio a la rama main remota
+
+git merge "nombre de la rama" 
+    -Fusiona main remota con rama local "nombre de tu rama"
+
+git commit -m "contenido del commit explicando el cambio" 
+    -Comentario explicando los cambios realizados.
+
+git push origin main
+    -Sube los cambios a tu repositorio remoto utilizando
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+    ///INFO///
 
 *La funcionalidad de Optimización de Imágenes, Fuentes y Scripts de NextJs 
 (ajusta width y height automáticamente) 
+
 ***SOLO FUNCIONA*** 
 Con una importación estática desde la carpeta local. con lo cual por CDN o servidor de imágenes se deben ajustar los parámetros manualmente para que sea responsive.
 
-----------------------------------------------------
-
-Tareas Pendientes:
-
--Agregar Link (funcionalidad de NextJs) al navbar
-
--Chequear layout y agregar las distintas paginas del sitio (carrito, nosotros, productos etc)
-
--Agregar fuentes con complemento de NextJs (Fonts)
+-------------------------------------------------------------------------------------------------------------------------------
+    Tareas Pendientes:
 
 -Dar estilos a colecciones
 
 -Solicitar texto de Nosotros a Yael (Dueña)
 
--Comenzar a hacer el Footer
+-Ajustar fuente del Footer
 
--Consultar con Iván cómo se llevan los cambios que se realizan en las ramas de cada miembro hacia la rama main (sugirió revisar docs de GitHub)
-
-https://docs.github.com/es/pull-requests
-
-Deberias ir al repo main y modificarle esa configuracion, la configuracion de la seguridad es asi:
-
-securty / branches / add protection rule / protect matching branches / require pull request before merging
-
-Una vez que terminamos con el Front (que falta bastante) deberíamos arrancar con el backend no?
-
-Si es ecommerce, si. Porque vas a necesitar donde guardar usuarios, las compras, los productos, etc
+-Una vez que terminamos con el Front (que falta bastante) deberíamos arrancar con el backend. Porque vamos a necesitar donde guardar usuarios, las compras, los productos, etc
