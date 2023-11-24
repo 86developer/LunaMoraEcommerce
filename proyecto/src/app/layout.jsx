@@ -3,8 +3,8 @@ import '../styles/globals.css';
 import {
   Roboto_Condensed, Alex_Brush
 } from 'next/font/google';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/footer';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 const roboto = Roboto_Condensed({
   weight: ["300"],
