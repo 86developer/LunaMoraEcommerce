@@ -49,6 +49,7 @@ git push origin main
 Con una importación estática desde la carpeta local. con lo cual por CDN o servidor de imágenes se deben ajustar los parámetros manualmente para que sea responsive.
 
 -------------------------------------------------------------------------------------------------------------------------------
+    
     Tareas Pendientes:
 
 -Dar estilos a colecciones
