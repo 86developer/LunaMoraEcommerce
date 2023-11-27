@@ -232,7 +232,7 @@ export default function Example() {
 
                             {/* Logo */}
                             <div className="ml-4 flex lg:ml-0">
-                                <Link href="/home">
+                                <Link href="/">
                                     <span className="sr-only">Luna Mora</span>
                                     <Image priority width={100} height={100} src="/img/lunafondo.png" alt='lenceria de diseño' />
                                 </Link>
