@@ -19,7 +19,7 @@ export default function Nosotros() {
     return (
         <div >
             <div className="bg-fuchsia-300 container mx-auto p-4">
-                <h1 className={`text-4xl font-bold mb-6${alex.className}`}>Nosotros</h1>
+                <h1 className={`text-4xl font-bold mb-6 ${alex.className}`}>Nosotros</h1>
                 <div className="flex flex-wrap justify-center gap-4">
                     <div className="w-full lg:w-1/2 p-4">
                         <img
@@ -47,3 +47,5 @@ export default function Nosotros() {
         </div>
     );
 }
+
+
