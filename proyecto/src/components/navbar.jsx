@@ -213,7 +213,7 @@ export default function Example() {
             </Transition.Root>
 
             <header className="relative bg-white">
-                <p className="bg-orange-300 flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+                <p className="bg-orange-300 flex h-10 items-center justify-center px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
                     Festejamos el Dia de la Madre!! 50% OFF
                 </p>
 
