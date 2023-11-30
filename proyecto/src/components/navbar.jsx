@@ -214,7 +214,7 @@ export default function Example() {
 
             <header className="relative bg-white">
                 <p className="bg-orange-300 flex h-10 items-center justify-center px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-                    Festejamos el Dia de la Madre!! 50% OFF
+                    BLACK FRIDAY!! 50% OFF
                 </p>
 
                 <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
