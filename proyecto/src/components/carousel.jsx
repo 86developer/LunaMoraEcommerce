@@ -5,9 +5,9 @@ function Carousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slides = [
-        { id: 1, imageSrc: 'https://previews.123rf.com/images/irishasel/irishasel1802/irishasel180200270/95651205-bragas-de-algod%C3%B3n-a-rayas-y-sujetador-blanco-lencer%C3%ADa-femenina-en-el-fondo-de-madera-vista.jpg', altText: 'Slide 1' },
-        { id: 2, imageSrc: 'https://img.freepik.com/fotos-premium/arreglo-lenceria-femenina-bodegon_23-2150411322.jpg?w=740', altText: 'Slide 2' },
-        { id: 3, imageSrc: 'https://www.shutterstock.com/shutterstock/photos/1718154814/display_1500/stock-photo-portrait-of-a-confident-and-sexy-female-model-with-brown-hair-wearing-black-lingerie-while-laying-1718154814.jpg', altText: 'Slide 3' },
+        { id: 1, imageSrc: '/img/prendabanner.webp', altText: 'Slide 1' },
+        { id: 2, imageSrc: '/img/ropabanner.webp', altText: 'Slide 2' },
+        { id: 3, imageSrc: '/img/mujerbanner.webp', altText: 'Slide 3' },
     ];
 
     const nextSlide = () => {
@@ -44,11 +44,11 @@ function Carousel() {
                     ></div>
                 ))}
             </div>
-            <button onClick={prevSlide} className="carousel-button left">
-                Previous
+            <button onClick={prevSlide} className="carousel-button left hover:bg-orange-300 text-white font-extrabold text-xl opacity-60">
+                &lt;
             </button>
-            <button onClick={nextSlide} className="carousel-button right">
-                Next
+            <button onClick={nextSlide} className="carousel-button right hover:bg-orange-300 text-white font-extrabold text-xl opacity-60">
+                &gt;
             </button>
         </div>
 
