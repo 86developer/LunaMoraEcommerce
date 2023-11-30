@@ -1,6 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-
+import Image from 'next/image';
+import img1 from 'public/img/imagen1.webp';
+import img2 from 'public/img/imagen2.webp';
+import img3 from 'public/img/imagen3.webp';
 import {
     Roboto_Condensed, Alex_Brush
 } from 'next/font/google';
@@ -27,28 +30,28 @@ function Colecciones() {
         {
             name: 'Algodon',
             description: 'Si tenes problemas con algun tipo de tela sintetica esta es tu categoria.',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg',
+            imageSrc: '/img/ropabanner.webp',
             imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
             href: '#',
         },
         {
             name: 'Poliester',
             description: 'Creaciones en las ultimas telas del mercado entra aca y conocelas.',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
+            imageSrc: '/img/imagen1.webp',
             imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
             href: '#',
         },
         {
             name: 'New Arrivals',
             description: 'Nuevas creaciones, tenemos novedades en cada una de las categorias.',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
+            imageSrc: 'img/imagen2.webp',
             imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
             href: '#',
         },
     ]
     return (
-        <div className="mx-auto max-w-7xl px-4 pb-0 sm:px-6 lg:px-8">
-            <div className="mb-5 mt-5 px-5 pb-6 pt-5 max-w-2xl rounded-lg sm:py-13 lg:max-w-none lg:py-10 bg-fuchsia-200">
+        <div className="sm:mx-6 md:mx-8 lg:mx-16">
+            <div className="px-6 py-6 my-12  max-w-2xl rounded-lg sm:py-12 lg:max-w-none lg:py-10 bg-fuchsia-200">
                 <h2 className={`text-5xl text-gray-400 ${alex.className}`}>Colecciones</h2>
 
                 <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
@@ -58,7 +61,7 @@ function Colecciones() {
                                 <img
                                     src={callout.imageSrc}
                                     alt={callout.imageAlt}
-                                    className="h-full w-full object-cover object-center"
+                                    className="object-cover object-center  w-full h-full"
                                 />
                             </div>
                             <h3 className={`mt-6 text-3xl text-gray-400 ${alex.className}`}>
