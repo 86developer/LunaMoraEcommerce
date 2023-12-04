@@ -4,6 +4,8 @@ import Image from 'next/image';
 import img1 from 'public/img/imagen1.webp';
 import img2 from 'public/img/imagen2.webp';
 import img3 from 'public/img/imagen3.webp';
+import '../styles/globals.css';
+
 import {
     Roboto_Condensed, Alex_Brush
 } from 'next/font/google';
@@ -51,8 +53,8 @@ function Colecciones() {
     ]
     return (
         <div className="sm:mx-6 md:mx-8 lg:mx-16">
-            <div className="px-6 py-6 my-12  max-w-2xl rounded-lg sm:py-12 lg:max-w-none lg:py-10 bg-fuchsia-200">
-                <h2 className={`text-5xl text-gray-400 ${alex.className}`}>Colecciones</h2>
+            <div className={`px-6 py-6 my-12  max-w-2xl rounded-lg sm:py-12 lg:max-w-none lg:py-10 bg-orange-100`}>
+                <h2 className={`text-5xl text-amber-900 ${alex.className}`}>Colecciones</h2>
 
                 <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
                     {callouts.map((callout) => (
@@ -64,13 +66,13 @@ function Colecciones() {
                                     className="object-cover object-center  w-full h-full"
                                 />
                             </div>
-                            <h3 className={`mt-6 text-3xl text-gray-400 ${alex.className}`}>
+                            <h3 className={`mt-6 text-3xl text-amber-900 ${alex.className}`}>
                                 <a href={callout.href}>
                                     <span className="absolute inset-0" />
                                     {callout.name}
                                 </a>
                             </h3>
-                            <p className={`text-base text-gray-400 ${roboto.className}`}>{callout.description}</p>
+                            <p className={`text-base font-bold text-amber-900 ${roboto.className}`}>{callout.description}</p>
                         </div>
                     ))}
                 </div>
