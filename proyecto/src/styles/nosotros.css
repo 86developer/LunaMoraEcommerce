@@ -1,0 +1,57 @@
+.contenedor-imagen {
+    position: relative;
+
+    overflow: hidden;
+    /* Para que el texto no se salga del contenedor de la imagen */
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    /* Ajustar el tamaño de la imagen */
+    height: auto;
+    display: block;
+}
+
+.contenedor-texto {
+    position: absolute;
+    /* Posiciona el texto de manera absoluta */
+    top: 50%;
+    /* Ajusta el texto en la mitad superior */
+    left: 50%;
+    /* Ajusta el texto en el centro horizontal */
+    max-width: 80%;
+    /* Ancho máximo del contenedor de texto */
+    transform: translate(-50%, -50%);
+    /* Centra el texto tanto vertical como horizontalmente */
+    text-align: center;
+    /* Alinea el texto al centro */
+    line-height: 1.5;
+    padding: 10px;
+    /* Agrega relleno alrededor del texto */
+    background-color: rgba(255, 237, 213, 0.6);
+    /* Cambia el color de fondo del texto */
+}
+
+
+
+
+/* Tamaño de fuente para dispositivos grandes */
+@media screen and (min-width: 1024px) {
+    .contenedor-texto {
+        font-size: 2vw;
+    }
+}
+
+/* Tamaño de fuente para dispositivos medianos */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .contenedor-texto {
+        font-size: 3vw;
+    }
+}
+
+/* Tamaño de fuente para dispositivos pequeños */
+@media screen and (max-width: 767px) {
+    .contenedor-texto {
+        font-size: 3vw;
+    }
+}
