@@ -93,8 +93,21 @@ export default function Formulario() {
                             </div>
                             <div className="mb-4 flex flex-wrap ">
                                 <div className="campo">
-                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" for="apellido">Apellido</label>
-                                    <Field placeholder="Ingrese su apellido" type="text" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="apellido" name="apellido" required onBlur={handleBlur} />
+                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" htmlFor="apellido">Apellido</label>
+                                    <Field
+                                        placeholder="Ingrese su apellido"
+                                        type="text"
+                                        name="apellido"
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="apellido" required
+                                        onBlur={(e) => {
+                                            handleFieldBlur(e);
+                                            handleBlur(e);
+                                        }} />
+                                    {isFieldValid && (
+                                        <div className="text-green-500 font-semibold">
+                                            <FontAwesomeIcon icon={faCheckCircle} />
+                                        </div>
+                                    )}
                                     <ErrorMessage name="apellido" component="div" className="text-red-500 font-semibold" />
 
 
@@ -103,8 +116,21 @@ export default function Formulario() {
                             </div>
                             <div className="mb-4 flex flex-wrap ">
                                 <div className="campo">
-                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" for="telefono">Telefono</label>
-                                    <Field placeholder="Ingrese su telefono" type="telefono" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="telefono" name="telefono" required onBlur={handleBlur} />
+                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" htmlFor="telefono">Telefono</label>
+                                    <Field
+                                        placeholder="Ingrese su telefono"
+                                        type="telefono"
+                                        name="telefono"
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="telefono" required
+                                        onBlur={(e) => {
+                                            handleFieldBlur(e);
+                                            handleBlur(e);
+                                        }} />
+                                    {isFieldValid && (
+                                        <div className="text-green-500 font-semibold">
+                                            <FontAwesomeIcon icon={faCheckCircle} />
+                                        </div>
+                                    )}
                                     <ErrorMessage name="telefono" component="div" className="text-red-500 font-semibold" />
 
 
@@ -112,15 +138,28 @@ export default function Formulario() {
                             </div>
                             <div className="mb-4 flex flex-wrap ">
                                 <div className="campo">
-                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" for="email">Email</label>
-                                    <Field placeholder="Ingrese su email" type="email" className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="email" name="email" required onBlur={handleBlur} />
+                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" htmlFor="email">Email</label>
+                                    <Field
+                                        placeholder="Ingrese su email"
+                                        type="email"
+                                        name="email"
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="email" required
+                                        onBlur={(e) => {
+                                            handleFieldBlur(e);
+                                            handleBlur(e);
+                                        }} />
+                                    {isFieldValid && (
+                                        <div className="text-green-500 font-semibold">
+                                            <FontAwesomeIcon icon={faCheckCircle} />
+                                        </div>
+                                    )}
                                     <ErrorMessage name="email" component="div" className="text-red-500 font-semibold" />
 
 
                                 </div>
                             </div>
 
-                            <button type="submit" disabled={isSubmitting}>Enviar</button>
+                            <button className='' type="submit" disabled={isSubmitting}>Enviar</button>
                             <Field type="hidden" name="_subject" value="Ha llegado un Nuevo Contacto" />
                             <Field type="hidden" name="_template" value="table" />
                         </Form>
