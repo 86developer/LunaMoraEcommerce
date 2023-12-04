@@ -10,18 +10,21 @@
   font-weight: 400;
   background-color: #ffffff;
   --color-blanco: #fff;
-  --color-uno: #fdcae1;
-  --color-dos: #9bfab0;
-  --color-tres: #73d9bc;
-  --color-cuatro: #d7a1f6;
-  --color-cinco: #ffb888;
+  --marronuno: #574b4b;
+  --color-dos: #e8c698;
+  --color-tres: #8b9088;
+  --color-cuatro: #020101;
+  --color-cinco: #a8847c;
 }
 
 body {
   margin: 0;
   /* Elimina el margen predeterminado del cuerpo */
   padding: 0;
+
+
   /* Elimina el relleno predeterminado del cuerpo */
+  /*background-image: linear-gradient(to right bottom, #e8c698, #efcaaa, #f2cfbc, #f1d6cc, #eddedb);*/
 }
 
 .carousel-container {
@@ -32,4 +35,8 @@ body {
 
 h1 {
   color: var(--color-blanco);
+}
+
+.text-success {
+  color: green;
 }
