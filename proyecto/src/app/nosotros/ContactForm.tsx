@@ -1,21 +1,22 @@
 "use client";
- 
+
 import React from "react";
 import { useState } from "react";
- 
+import {Form,Formik,Field} from 'formik';
+
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
- 
+
   async function handleSubmit(event: any) {
     event.preventDefault();
     setLoading(true);
- 
+
     const data = {
       name: String(event.target.name.value),
       email: String(event.target.email.value),
       message: String(event.target.message.value),
     };
- 
+
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -23,11 +24,11 @@ export default function ContactForm() {
       },
       body: JSON.stringify(data),
     });
- 
+
     if (response.ok) {
       console.log("Message sent successfully");
       setLoading(false);
-      
+
       event.target.name.value = "";
       event.target.email.value = "";
       event.target.message.value = "";
@@ -38,10 +39,11 @@ export default function ContactForm() {
     }
   }
   return (
-    <form onSubmit={handleSubmit}>
+ 
+    <form onSubmit={handleSubmit} className="">
       <div className="w-full flex flex-col my-4">
         <label
-          className="font-bold text-gray-800"
+          className=" text-gray-800"
           htmlFor="name"
         >
           Nombre Completo
@@ -51,14 +53,14 @@ export default function ContactForm() {
           minLength={3}
           maxLength={150}
           required
-          className=" p-4 bg-gray-50 border border-gray-100 "
+          className=" p-4 bg-gray-50 border border-gray-300 rounded-md "
           autoComplete="off"
           id="name"
         />
       </div>
       <div className="w-full flex flex-col my-4">
         <label
-          className="font-bold text-gray-800"
+          className=" text-gray-800"
           htmlFor="email"
         >
           Email
@@ -68,14 +70,14 @@ export default function ContactForm() {
           minLength={5}
           maxLength={150}
           required
-          className=" p-4 bg-gray-50 border border-gray-100 "
+          className=" p-4 bg-gray-50 border border-gray-300  rounded-md"
           autoComplete="off"
           id="email"
         />
       </div>
       <div>
         <label
-          className="font-bold text-gray-800"
+          className=" text-gray-800 "
           htmlFor="message"
         >
           Mensaje
@@ -86,7 +88,7 @@ export default function ContactForm() {
           minLength={10}
           maxLength={500}
           name="message"
-          className="w-full p-4 bg-gray-50 border border-gray-100 "
+          className="w-full p-4 bg-gray-50 border border-gray-300  rounded-md"
         />
       </div>
       <button

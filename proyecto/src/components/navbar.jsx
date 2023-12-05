@@ -70,6 +70,7 @@ const navigation = {
     pages: [
         { name: 'Nosotros', href: '/nosotros' },
         { name: 'Productos', href: '/productos' },
+        { name: 'Detalles', href: '/details' },
     ],
 }
 
