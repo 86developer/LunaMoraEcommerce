@@ -29,7 +29,7 @@ export default function Contacto() {
 
     return (
         <>
-            <div className="flex-row  my-12 bg-orange-100">
+            <div className="flex-row bg-orange-100">
                 <div className="pt-8 pl-4 lg:pl-20 lg:pt-12">
                     <h2 className={`text-5xl text-amber-900 ${alex.className}`}>Contacto</h2>
 
