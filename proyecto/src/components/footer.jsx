@@ -22,7 +22,7 @@ export default function Footer() {
                     </li>
                 </ul>
                 <span className="text-sm sm:text-center text-amber-900">
-                    © 2023 <Link href="/home" className="hover:underline">Luna Mora</Link>. Todos los derechos reservados.
+                    © 2023 <Link href="#" className="hover:underline">86developer</Link>. Todos los derechos reservados.
                 </span>
             </div>
         </footer>
