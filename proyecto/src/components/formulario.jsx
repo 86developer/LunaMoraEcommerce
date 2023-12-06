@@ -5,6 +5,22 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import * as Yup from 'yup';
 import '../styles/globals.css';
 
+import {
+    Roboto_Condensed, Alex_Brush
+} from 'next/font/google';
+
+
+const roboto = Roboto_Condensed({
+    weight: ["300"],
+    style: ["normal"],
+    subsets: ["latin"],
+})
+const alex = Alex_Brush({
+    weight: ["400"],
+    style: ["normal"],
+    subsets: ["latin"],
+})
+
 
 
 
@@ -55,9 +71,7 @@ export default function Formulario() {
     }
     return (
         <div className="formulario">
-            <div>
-                <h2>Completa tus datos y nos contactaremos a la brevedad</h2>
-            </div>
+
             <div className="flex-auto p-6">
                 <Formik
                     initialValues={initialValues}
@@ -67,8 +81,8 @@ export default function Formulario() {
                     {({ isSubmitting, handleBlur, errors, touched }) => (
                         <Form action="" method="post" className="form-horizontal">
                             <div className="mb-4 flex flex-wrap">
-                                <div className="campo">
-                                    <label htmlFor="nombre" className=" sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normalcampo">Nombre</label>
+                                <div className="campo w-full">
+                                    <label htmlFor="nombre" className=" sm:w-1/3 mb-0 leading-normalcampo text-amber-900">Nombre</label>
 
                                     <Field
                                         placeholder="Ingrese su nombre"
@@ -92,8 +106,8 @@ export default function Formulario() {
                                 </div>
                             </div>
                             <div className="mb-4 flex flex-wrap ">
-                                <div className="campo">
-                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" htmlFor="apellido">Apellido</label>
+                                <div className="campo w-full">
+                                    <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="apellido">Apellido</label>
                                     <Field
                                         placeholder="Ingrese su apellido"
                                         type="text"
@@ -115,8 +129,8 @@ export default function Formulario() {
                                 </div>
                             </div>
                             <div className="mb-4 flex flex-wrap ">
-                                <div className="campo">
-                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" htmlFor="telefono">Telefono</label>
+                                <div className="campo w-full">
+                                    <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="telefono">Telefono</label>
                                     <Field
                                         placeholder="Ingrese su telefono"
                                         type="telefono"
@@ -137,13 +151,13 @@ export default function Formulario() {
                                 </div>
                             </div>
                             <div className="mb-4 flex flex-wrap ">
-                                <div className="campo">
-                                    <label className="sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal campo" htmlFor="email">Email</label>
+                                <div className="campo w-full">
+                                    <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="email">Email</label>
                                     <Field
                                         placeholder="Ingrese su email"
                                         type="email"
                                         name="email"
-                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="email" required
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white  border border-gray-200 rounded" id="email" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
                                             handleBlur(e);
@@ -158,8 +172,9 @@ export default function Formulario() {
 
                                 </div>
                             </div>
-
-                            <button className='' type="submit" disabled={isSubmitting}>Enviar</button>
+                            <div className="flex justify-center w-16 h-7 rounded-md bg-orange-400">
+                                <button className='text-white font-semibold' type="submit" disabled={isSubmitting}>Enviar</button>
+                            </div>
                             <Field type="hidden" name="_subject" value="Ha llegado un Nuevo Contacto" />
                             <Field type="hidden" name="_template" value="table" />
                         </Form>
