@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Puedes agregar aquí tus etiquetas <meta>, <link>, etc., según sea necesario */}
       </head>
-      <body className={roboto.className}>
+      <body>
         <Navbar />
         {children}
         <Footer />
