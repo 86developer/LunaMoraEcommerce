@@ -5,7 +5,7 @@ function Carousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slides = [
-        { id: 1, imageSrc: '/img/prendabanner.webp', altText: 'Slide 1' },
+        { id: 1, imageSrc: '/img/contacto.webp', altText: 'Slide 1' },
         { id: 2, imageSrc: '/img/ropabanner.webp', altText: 'Slide 2' },
         { id: 3, imageSrc: '/img/mujerbanner.webp', altText: 'Slide 3' },
     ];
