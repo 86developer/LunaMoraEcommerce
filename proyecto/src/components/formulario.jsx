@@ -72,7 +72,7 @@ export default function Formulario() {
     return (
         <div className="formulario">
 
-            <div className="flex-auto p-6">
+            <div className="flex-auto p-0">
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -81,14 +81,14 @@ export default function Formulario() {
                     {({ isSubmitting, handleBlur, errors, touched }) => (
                         <Form action="" method="post" className="form-horizontal">
                             <div className="mb-4 flex flex-wrap">
-                                <div className="campo w-full">
+                                <div className="campo w-full lg:mb-8">
                                     <label htmlFor="nombre" className=" sm:w-1/3 mb-0 leading-normalcampo text-amber-900">Nombre</label>
 
                                     <Field
                                         placeholder="Ingrese su nombre"
                                         type="text"
                                         name="nombre"
-                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-amber-200 rounded "
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
                                             handleBlur(e);
@@ -106,13 +106,13 @@ export default function Formulario() {
                                 </div>
                             </div>
                             <div className="mb-4 flex flex-wrap ">
-                                <div className="campo w-full">
+                                <div className="campo w-full lg:mb-8">
                                     <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="apellido">Apellido</label>
                                     <Field
                                         placeholder="Ingrese su apellido"
                                         type="text"
                                         name="apellido"
-                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="apellido" required
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-amber-200 rounded" id="apellido" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
                                             handleBlur(e);
@@ -129,13 +129,13 @@ export default function Formulario() {
                                 </div>
                             </div>
                             <div className="mb-4 flex flex-wrap ">
-                                <div className="campo w-full">
+                                <div className="campo w-full lg:mb-8">
                                     <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="telefono">Telefono</label>
                                     <Field
                                         placeholder="Ingrese su telefono"
                                         type="telefono"
                                         name="telefono"
-                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="telefono" required
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-amber-200 rounded" id="telefono" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
                                             handleBlur(e);
@@ -151,13 +151,13 @@ export default function Formulario() {
                                 </div>
                             </div>
                             <div className="mb-4 flex flex-wrap ">
-                                <div className="campo w-full">
+                                <div className="campo w-full lg:mb-8">
                                     <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="email">Email</label>
                                     <Field
                                         placeholder="Ingrese su email"
                                         type="email"
                                         name="email"
-                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white  border border-gray-200 rounded" id="email" required
+                                        className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white  border border-amber-200 rounded" id="email" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
                                             handleBlur(e);
@@ -172,8 +172,8 @@ export default function Formulario() {
 
                                 </div>
                             </div>
-                            <div className="flex justify-center w-16 h-7 rounded-md bg-orange-400">
-                                <button className='text-white font-semibold' type="submit" disabled={isSubmitting}>Enviar</button>
+                            <div className="flex justify-center w-20 h-10 rounded-md bg-orange-400">
+                                <button className='text-white font-semibold w-20 h-10' type="submit" disabled={isSubmitting}>Enviar</button>
                             </div>
                             <Field type="hidden" name="_subject" value="Ha llegado un Nuevo Contacto" />
                             <Field type="hidden" name="_template" value="table" />

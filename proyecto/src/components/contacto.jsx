@@ -29,15 +29,16 @@ export default function Contacto() {
 
     return (
         <>
-            <div className="flex justify-center rounded-lg my-12 bg-orange-100">
-                <div className="flex justify-center items-center my-12 px-6 py-6 max-w-2xl rounded-lg sm:py-12 lg:max-w-none lg:py-10 space-x-6">
+            <div className="flex-row rounded-lg my-12 bg-orange-100">
+                <div className="pt-8 pl-8 lg:pl-20 lg:pt-12">
+                    <h2 className={`text-5xl text-amber-900 ${alex.className}`}>Contacto</h2>
 
-                    <div className="w-1/2">
-                        <div className=" pb-12 pl-6">
-                            <h2 className={`text-5xl text-amber-900 ${alex.className}`}>Contacto</h2>
+                    <p className='text-amber-900'>Completa tus datos y nos contactaremos a la brevedad</p>
+                </div>
+                <div className="flex justify-center items-center my-2 px-6 py-6 max-w-2xl rounded-lg lg:max-w-screen-lg space-x-14 lg:pl-12 lg:pt-0 lg:ml-32 ">
 
-                            <h2 className='text-amber-900'>Completa tus datos y nos contactaremos a la brevedad</h2>
-                        </div>
+                    <div className="w-40">
+
                         <Formulario />
                     </div>
                     <div className="w-1/2">
