@@ -20,8 +20,8 @@ function Carousel() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            //setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-        },);
+            //setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 5000 : prevSlide + 1));
+        }, /* Aquí va el intervalo de tiempo para el cambio automático de slides */);
 
         return () => clearInterval(interval);
     }, []);
@@ -34,12 +34,13 @@ function Carousel() {
                         key={slide.id}
                         className={`slide ${index === currentSlide ? 'active' : ''}`}
                         style={{
-                            backgroundImage: `url(${slide.imageSrc})`, // Establecer la imagen de fondo en línea con la URL proporcionada
-                            backgroundSize: 'cover', // Ajustar el tamaño de la imagen de fondo al contenedor
-                            backgroundPosition: 'center', // Alinear la imagen de fondo al centro
-                            height: '500px', // Ajusta la altura del banner según tus necesidades
-                            width: '100%', // Ajusta el ancho del banner según tus necesidades
-                            display: index === currentSlide ? 'block' : 'none', // Mostrar solo la imagen actual, ocultar las demás
+                            backgroundImage: `url(${slide.imageSrc})`,
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            height: '60vw', // Establece una altura fija para el carrusel
+                            width: '100%', // El ancho se ajustará automáticamente
+                            display: index === currentSlide ? 'block' : 'none',
                         }}
                     ></div>
                 ))}
@@ -51,7 +52,6 @@ function Carousel() {
                 &gt;
             </button>
         </div>
-
     );
 }
 
