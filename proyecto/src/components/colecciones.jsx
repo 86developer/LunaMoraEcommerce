@@ -11,14 +11,18 @@ import {
 } from 'next/font/google';
 
 const roboto = Roboto_Condensed({
-    weight: ["300"],
+
     style: ["normal"],
     subsets: ["latin"],
+    weight: '400',
+    display: 'swap',
 })
 const alex = Alex_Brush({
-    weight: ["400"],
+
     style: ["normal"],
     subsets: ["latin"],
+    weight: '400',
+    display: 'swap',
 })
 
 
@@ -31,21 +35,21 @@ function Colecciones() {
     const callouts = [
         {
             name: 'Algodon',
-            description: 'Si tenes problemas con algun tipo de tela sintetica esta es tu categoria.',
+            description: 'Descubre nuestra lencería de algodón: suave, ligera y perfecta para el día a día. Diseñada para brindar comodidad sin sacrificar el estilo, cada prenda ofrece una sensación delicada y transpirable. Desde sutiles sujetadores hasta conjuntos elegantes, nuestra colección es la combinación ideal de confort y sofisticación.',
             imageSrc: '/img/ropabanner.webp',
             imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
             href: '#',
         },
         {
             name: 'Poliester',
-            description: 'Creaciones en las ultimas telas del mercado entra aca y conocelas.',
+            description: 'Explora nuestra colección de lencería de poliéster: moderna, duradera y lista para cualquier ocasión. Con telas innovadoras, estas prendas ofrecen versatilidad y estilo. Desde diseños vibrantes hasta cortes elegantes, nuestra lencería de poliéster combina moda y funcionalidad para destacar en cada momento.',
             imageSrc: '/img/imagen1.webp',
             imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
             href: '#',
         },
         {
             name: 'New Arrivals',
-            description: 'Nuevas creaciones, tenemos novedades en cada una de las categorias.',
+            description: 'Encuentra aqui nuestras adiciones más recientes en lencería. Cada nueva incorporación a nuestra colección trae diseños innovadores y emocionantes. Descubre lo último en moda íntima: desde estilos frescos hasta reinventadas interpretaciones de clásicos, cada prenda está lista para cautivarte.',
             imageSrc: 'img/imagen2.webp',
             imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
             href: '#',

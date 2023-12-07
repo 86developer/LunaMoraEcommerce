@@ -11,8 +11,8 @@ const navigation = {
 
     ],
     pages: [
-        { name: 'Nosotros', href: '/nosotros' },
-        { name: 'Productos', href: '/productos' },
+        { name: 'Nosotros', href: '#nosotros-component' },
+        { name: 'Colecciones', href: '#colecciones-component' },
     ],
 }
 

@@ -82,7 +82,7 @@ export default function Formulario() {
                         <Form action="" method="post" className="form-horizontal">
                             <div className="mb-4 flex flex-wrap">
                                 <div className="campo w-full lg:mb-8">
-                                    <label htmlFor="nombre" className=" sm:w-1/3 mb-0 leading-normalcampo text-amber-900">Nombre</label>
+                                    <label htmlFor="nombre" className={`sm:w-1/3 xl:text-lg mb-0 leading-normalcampo text-amber-900 htmlFor="nombre" ${roboto.className}`}>Nombre</label>
 
                                     <Field
                                         placeholder="Ingrese su nombre"
@@ -107,7 +107,7 @@ export default function Formulario() {
                             </div>
                             <div className="mb-4 flex flex-wrap ">
                                 <div className="campo w-full lg:mb-8">
-                                    <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="apellido">Apellido</label>
+                                    <label className={`sm:w-1/3 xl:text-lg mb-0 leading-normalcampo text-amber-900 htmlFor="apellido" ${roboto.className}`}>Apellido</label>
                                     <Field
                                         placeholder="Ingrese su apellido"
                                         type="text"
@@ -130,7 +130,7 @@ export default function Formulario() {
                             </div>
                             <div className="mb-4 flex flex-wrap ">
                                 <div className="campo w-full lg:mb-8">
-                                    <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="telefono">Telefono</label>
+                                    <label className={`sm:w-1/3 xl:text-lg mb-0 leading-normalcampo text-amber-900 htmlFor="telefono" ${roboto.className}`}>Telefono</label>
                                     <Field
                                         placeholder="Ingrese su telefono"
                                         type="telefono"
@@ -152,7 +152,7 @@ export default function Formulario() {
                             </div>
                             <div className="mb-4 flex flex-wrap ">
                                 <div className="campo w-full lg:mb-8">
-                                    <label className="sm:w-1/3  mb-0 leading-normal campo text-amber-900" htmlFor="email">Email</label>
+                                    <label className={`sm:w-1/3 xl:text-lg mb-0 leading-normalcampo text-amber-900 htmlFor="email" ${roboto.className}`}>Email</label>
                                     <Field
                                         placeholder="Ingrese su email"
                                         type="email"

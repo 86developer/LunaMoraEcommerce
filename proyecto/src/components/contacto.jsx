@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import Formulario from '@/components/formulario';
-
 import Image from 'next/image';
 import img from 'public/img/formv.webp';
 import img2 from 'public/img/imagen2.webp';
@@ -14,14 +13,18 @@ import {
 
 
 const roboto = Roboto_Condensed({
-    weight: ["300"],
+
     style: ["normal"],
     subsets: ["latin"],
+    weight: '400',
+    display: 'swap',
 })
 const alex = Alex_Brush({
-    weight: ["400"],
+
     style: ["normal"],
     subsets: ["latin"],
+    weight: '400',
+    display: 'swap',
 })
 
 
@@ -33,7 +36,7 @@ export default function Contacto() {
                 <div className="pt-8 pl-4 lg:pl-20 lg:pt-12">
                     <h2 className={`text-5xl text-amber-900 ${alex.className}`}>Contacto</h2>
 
-                    <p className='text-amber-900'>Completa tus datos y nos contactaremos a la brevedad</p>
+                    <p className={`xl:text-xl text-amber-900 ${roboto.className}`}>Completa tus datos y nos contactaremos a la brevedad</p>
                 </div>
                 <div className="flex justify-center items-center px-3 py-6 max-w-2xl lg:max-w-screen-lg space-x-1 lg:space-x-6 lg:pl-12 lg:pt-0 lg:ml-32 ">
 
