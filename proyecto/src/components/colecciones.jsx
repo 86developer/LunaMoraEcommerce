@@ -36,7 +36,7 @@ function Colecciones() {
         {
             name: 'Algodon',
             description: 'Descubre nuestra lencería de algodón: suave, ligera y perfecta para el día a día. Diseñada para brindar comodidad sin sacrificar el estilo, cada prenda ofrece una sensación delicada y transpirable. Desde sutiles sujetadores hasta conjuntos elegantes, nuestra colección es la combinación ideal de confort y sofisticación.',
-            imageSrc: '/img/ropabanner.webp',
+            imageSrc: '/img/prendabanner.webp',
             imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
             href: '#',
         },
