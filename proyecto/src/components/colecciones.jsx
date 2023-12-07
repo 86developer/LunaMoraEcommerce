@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import img1 from 'public/img/imagen1.webp';
 import img2 from 'public/img/imagen2.webp';
-import img3 from 'public/img/imagen3.webp';
+import prendabanner from 'public/img/prendabanner.webp';
 import '../styles/globals.css';
 
 import {
@@ -50,7 +50,7 @@ function Colecciones() {
         {
             name: 'New Arrivals',
             description: 'Encuentra aqui nuestras adiciones más recientes en lencería. Cada nueva incorporación a nuestra colección trae diseños innovadores y emocionantes. Descubre lo último en moda íntima: desde estilos frescos hasta reinventadas interpretaciones de clásicos, cada prenda está lista para cautivarte.',
-            imageSrc: 'img/imagen2.webp',
+            imageSrc: '/img/imagen2.webp',
             imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
             href: '#',
         },
@@ -64,9 +64,11 @@ function Colecciones() {
                     {callouts.map((callout) => (
                         <div key={callout.name} className="group relative">
                             <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                                <img
+                                <Image
                                     src={callout.imageSrc}
                                     alt={callout.imageAlt}
+                                    height={300}
+                                    width={300}
                                     className="object-cover object-center  w-full h-full"
                                 />
                             </div>

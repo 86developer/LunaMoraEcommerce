@@ -18,7 +18,7 @@ export default function Home() {
             <Carousel />
             <div className=''>
                 <blockquote className='my-8 mx-8 italic text-center text-base font-bold text-amber-900 '>
-                    "Acompáñame en este viaje, y juntos podremos explorar la belleza y la sensualidad en la lencería de diseño propio."
+                    `&quot;`Acompáñame en este viaje, y juntos podremos explorar la belleza y la sensualidad en la lencería de diseño propio.`&quot;`
                 </blockquote>
             </div>
             <Colecciones />
