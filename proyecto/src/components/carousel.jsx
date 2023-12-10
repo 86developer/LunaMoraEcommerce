@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/carousel.css';
+import { object } from 'yup';
 
 function Carousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slides = [
-        { id: 1, imageSrc: '/img/contacto.webp', altText: 'Slide 1' },
-        { id: 2, imageSrc: '/img/ropabanner.webp', altText: 'Slide 2' },
-        { id: 3, imageSrc: '/img/mujerbanner.webp', altText: 'Slide 3' },
+        { id: 1, imageSrc: './img/contacto.webp', altText: 'Slide 1' },
+        { id: 2, imageSrc: './img/ropabanner.webp', altText: 'Slide 2' },
+        { id: 3, imageSrc: './img/mujerbanner.webp', altText: 'Slide 3' },
     ];
 
     const nextSlide = () => {

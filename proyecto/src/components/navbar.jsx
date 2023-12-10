@@ -177,7 +177,18 @@ export default function Example() {
                             <div className="ml-4 flex lg:ml-0">
                                 <Link href="/">
                                     <span className="sr-only">Luna Mora</span>
-                                    <Image priority width={110} height={170} src="/img/lunafondo.png" alt='lenceria de diseño' />
+                                    <img
+                                        style={{
+                                            width: '110px',
+                                            height: '67px',
+                                            objectfit: 'contain',
+                                        }}
+                                        priority
+                                        width={1453} // Ancho real del logo
+                                        height={836} // Alto real del logo 
+                                        loading="lazy"
+                                        src="./img/lunafondo.png"
+                                        alt='lenceria de diseño' />
                                 </Link>
                             </div>
 
