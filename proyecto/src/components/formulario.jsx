@@ -40,6 +40,9 @@ export default function Formulario() {
         email: Yup.string()
             .email('Por favor ingrese un correo electrónico válido')
             .required('Por favor ingrese su correo electrónico'),
+        email: Yup.string()
+            .matches(/^.{[1,100]}$/, 'Por favor ingrese hasta 100 caracteres')
+            .required('Por favor ingrese su mensaje'),
         agree: Yup.boolean().oneOf([true], 'Por favor acepte nuestra política'),
     });
 
@@ -49,6 +52,7 @@ export default function Formulario() {
         apellido: '',
         telefono: '',
         email: '',
+        mensaje: '',
         agree: false,
     };
 
@@ -168,6 +172,28 @@ export default function Formulario() {
                                         </div>
                                     )}
                                     <ErrorMessage name="email" component="div" className="text-red-500 font-semibold" />
+
+
+                                </div>
+                            </div>
+                            <div className="mb-4 flex flex-wrap ">
+                                <div className="campo w-full lg:mb-8">
+                                    <label className={`sm:w-1/3 xl:text-lg mb-0 leading-normalcampo text-amber-900 htmlFor="mensaje" ${roboto.className}`}>Mensaje</label>
+                                    <textarea
+                                        placeholder="Ingrese su mensaje"
+                                        type="textarea"
+                                        name="text"
+                                        className="block appearance-none w-full h-36 resize-none py-1 px-2 mb-1 text-base leading-normal bg-white  border border-amber-200 rounded" id="email" required
+                                        onBlur={(e) => {
+                                            handleFieldBlur(e);
+                                            handleBlur(e);
+                                        }} />
+                                    {isFieldValid && (
+                                        <div className="text-green-500 font-semibold">
+                                            <FontAwesomeIcon icon={faCheckCircle} />
+                                        </div>
+                                    )}
+                                    <ErrorMessage name="mensaje" component="div" className="text-red-500 font-semibold" />
 
 
                                 </div>
