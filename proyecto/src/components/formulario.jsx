@@ -40,8 +40,8 @@ export default function Formulario() {
         email: Yup.string()
             .email('Por favor ingrese un correo electrónico válido')
             .required('Por favor ingrese su correo electrónico'),
-        email: Yup.string()
-            .matches(/^.{[1,100]}$/, 'Por favor ingrese hasta 100 caracteres')
+        mensaje: Yup.string()
+            .matches(/^.{1,100}$/, 'Por favor ingrese hasta 100 caracteres')
             .required('Por favor ingrese su mensaje'),
         agree: Yup.boolean().oneOf([true], 'Por favor acepte nuestra política'),
     });
@@ -56,9 +56,28 @@ export default function Formulario() {
         agree: false,
     };
 
-    const handleSubmit = (values, { setSubmitting }) => {
+    const handleSubmit = async (values, { setSubmitting }) => {
         // Aquí puedes manejar el envío del formulario
-        console.log(values);
+        try {
+            const response = await fetch('http://localhost:3001/api/contacto', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+
+            if (response.ok) {
+                // Éxito al enviar el formulario
+                console.log('Mensaje enviado correctamente');
+            } else {
+                // Error al enviar el formulario
+                console.error('Error al enviar el mensaje');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
         setSubmitting(false);
     }
 
@@ -92,6 +111,7 @@ export default function Formulario() {
                                         placeholder="Ingrese su nombre"
                                         type="text"
                                         name="nombre"
+                                        autocomplete="off"
                                         className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-amber-200 rounded "
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
@@ -116,6 +136,7 @@ export default function Formulario() {
                                         placeholder="Ingrese su apellido"
                                         type="text"
                                         name="apellido"
+                                        autocomplete="off"
                                         className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-amber-200 rounded" id="apellido" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
@@ -139,6 +160,7 @@ export default function Formulario() {
                                         placeholder="Ingrese su telefono"
                                         type="telefono"
                                         name="telefono"
+                                        autocomplete="off"
                                         className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-amber-200 rounded" id="telefono" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
@@ -161,6 +183,7 @@ export default function Formulario() {
                                         placeholder="Ingrese su email"
                                         type="email"
                                         name="email"
+                                        autocomplete="off"
                                         className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white  border border-amber-200 rounded" id="email" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
@@ -182,7 +205,8 @@ export default function Formulario() {
                                     <textarea
                                         placeholder="Ingrese su mensaje"
                                         type="textarea"
-                                        name="text"
+                                        name="mensaje"
+                                        autocomplete="off"
                                         className="block appearance-none w-full h-36 resize-none py-1 px-2 mb-1 text-base leading-normal bg-white  border border-amber-200 rounded" id="email" required
                                         onBlur={(e) => {
                                             handleFieldBlur(e);
